@@ -1,10 +1,11 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+require './helpers'
 set :public_folder, 'assets/images'
 
 #routes
 
-get '/' do
+get '/' do  # path?variable
   @titulo = "Conversion de temperatura"
   @footer = "chachara del footer"
   erb :home
